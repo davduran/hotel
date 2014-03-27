@@ -1,0 +1,30 @@
+backend_hotel:
+    pattern:  /
+    defaults: { _controller: "BackendBundle:Hotel:index" }
+
+backend_hotel_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "BackendBundle:Hotel:show" }
+
+backend_hotel_new:
+    pattern:  /new
+    defaults: { _controller: "BackendBundle:Hotel:new" }
+
+backend_hotel_create:
+    pattern:  /create
+    defaults: { _controller: "BackendBundle:Hotel:create" }
+    requirements: { _method: post }
+
+backend_hotel_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "BackendBundle:Hotel:edit" }
+
+backend_hotel_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "BackendBundle:Hotel:update" }
+    requirements: { _method: post }
+
+backend_hotel_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "BackendBundle:Hotel:delete" }
+    requirements: { _method: post }

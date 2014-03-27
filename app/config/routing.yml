@@ -1,0 +1,8 @@
+backend:
+    resource: "@BackendBundle/Resources/config/routing.yml"
+    prefix:   /backend
+
+hotel:
+    resource: "@HotelBundle/Resources/config/routing.yml"
+    prefix:   /hotel
+

@@ -1,0 +1,7 @@
+backend_homepage:
+    pattern:  /
+    defaults: { _controller: BackendBundle:Default:index }
+
+BackendHotel:
+    resource: "@BackendBundle/Resources/config/routing/hotel.yml"
+    prefix:   /hotel

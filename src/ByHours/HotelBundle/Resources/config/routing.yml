@@ -1,0 +1,16 @@
+hotel_homepage:
+    pattern:  /
+    defaults: { _controller: HotelBundle:Default:index }
+
+hotel_view:
+    pattern:  /{hotel}
+    defaults: { _controller: HotelBundle:Default:view }
+    requirements:
+        hotel: .+
+
+hotel_booking:
+    pattern:  /{hotel}/booking/{room}
+    defaults: { _controller: HotelBundle:Default:booking }
+    requirements:
+        hotel: .+
+        room:  \d+

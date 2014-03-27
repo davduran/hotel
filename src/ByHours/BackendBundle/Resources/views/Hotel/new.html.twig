@@ -1,0 +1,22 @@
+{% extends '::backend.html.twig' %}
+
+{% block title %}Add new hotel{% endblock %}
+
+{% block article %}
+<h1>{{ block('title') }}</h1>
+
+<form action="{{ path('backend_hotel_create') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <p>
+        <button class="boton" type="submit">Add hotel</button>
+    </p>
+</form>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('backend_hotel') }}">
+            Back to hotel list
+        </a>
+    </li>
+</ul>
+{% endblock %}

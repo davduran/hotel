@@ -1,0 +1,8 @@
+{% for type, messages in app.session.flashbag.all() %}
+    {% for message in messages %}
+        <p class="flash flash-{{ type }}">
+            {{ type == 'error' ? '<strong>Error</strong> ' : '' | raw }}
+            {{ message }}
+        </p>
+    {% endfor %}
+{% endfor %}

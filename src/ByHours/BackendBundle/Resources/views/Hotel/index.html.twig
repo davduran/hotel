@@ -1,0 +1,38 @@
+{% extends '::backend.html.twig' %}
+
+{% block title %}Hotel list{% endblock %}
+
+{% block article %}
+<h1>{{ block('title') }}</h1>
+
+<table class="records_list estrecha">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td>{{ entity.name }}</td>
+            <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('backend_hotel_edit', { 'id': entity.id }) }}">Modify</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<ul>
+    <li>
+        <a class="boton" href="{{ path('backend_hotel_new') }}">
+            Add new hotel
+        </a>
+    </li>
+</ul>
+{% endblock %}

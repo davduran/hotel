@@ -1,0 +1,24 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset("bundles/backend/css/backend.css") }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset("bundles/backend/css/comun.css") }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset("bundles/backend/css/normalizar.css") }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block body %}
+<header>
+    <h1><a href="{{ path('backend_homepage') }}">ADMIN</a></h1>
+    <nav>
+        <ul>
+            <li><a href="{{ path('backend_hotel') }}">Hotels</a></li>
+        </ul>
+    </nav>
+</header>
+
+{% include ':includes:flashes.html.twig' %}
+
+<article>
+    {% block article %}{% endblock %}
+</article>
+{% endblock %}
