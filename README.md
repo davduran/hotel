@@ -1,3 +1,12 @@
+Hotel booking
+=============
+
+To access admin:
+
+/backend
+
+user admin password 1234
+
 Symfony Standard Edition
 ========================
 
